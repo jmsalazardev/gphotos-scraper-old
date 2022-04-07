@@ -17,7 +17,7 @@ SyncCommand.name("sync")
     const prisma = Container.get(PrismaClient);
     await prisma.$disconnect();
   })
-  .action(async (url, options) => {
+  .action(async (url) => {
     const albumSynchronizer = Container.get(AlbumSynchronizer);
     return albumSynchronizer.execute({ url });
   });
