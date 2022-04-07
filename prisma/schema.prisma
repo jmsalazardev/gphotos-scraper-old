@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Album {
+  id     String  @unique
+  title  String
+  url    String
+  photos Photo[]
+}
+
+model Photo {
+  id          String  @unique
+  albumId     String
+  name        String
+  mimeType    String
+  description String?
+  size        Int
+  width       Int
+  height      Int
+  url         String
+  createdAt   Int
+  album       Album   @relation(fields: [albumId], references: [id])
+}
