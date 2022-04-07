@@ -8,5 +8,5 @@ logs
 bin
 .vscode/
 dev.db
-*.env*
+*.env
 prisma/migrations

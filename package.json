@@ -23,21 +23,22 @@
     "lint": "npm run lint:code",
     "lint:code": "eslint src/**/*.{ts} --quiet --no-error-on-unmatched-pattern",
     "format": "npx prettier --write \"./src/**/*.ts\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "db:push": "npx prisma db push",
+    "db:pull": "npx prisma db pull",
+    "db:generate": "npx prisma generate",
+    "db:studio": "npx prisma studio"
   },
   "dependencies": {
     "@prisma/client": "^3.12.0",
     "axios": "^0.26.1",
-    "chalk": "^5.0.1",
-    "class-transformer": "^0.5.1",
     "clear": "^0.1.0",
     "commander": "^9.1.0",
     "mime-types": "^2.1.35",
-    "path": "^0.12.7",
+    "prisma": "^3.12.0",
     "puppeteer": "^13.5.2",
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.10.0",
-    "typescript-tslint-plugin": "^1.0.2",
     "winston": "^3.7.2"
   },
   "devDependencies": {
@@ -55,12 +56,11 @@
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "lint-staged": "^12.3.7",
-    "nodemon": "^2.0.15",
     "prettier": "2.6.2",
-    "prisma": "^3.12.0",
     "ts-node": "^10.7.0",
     "tslib": "^2.3.1",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.3",
+    "typescript-tslint-plugin": "^1.0.2"
   },
   "keywords": [
     "cli",
