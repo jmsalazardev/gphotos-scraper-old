@@ -6,7 +6,8 @@
     "name": "José Miguel Salazar",
     "email": "contacto@jmsalazar.dev"
   },
-  "version": "0.1.0",
+  "private": false,
+  "version": "0.1.1",
   "main": "bin/index.js",
   "bin": "bin/index.js",
   "scripts": {
@@ -18,7 +19,6 @@
     "create": "npm run build && npm run test",
     "local": "npm i -g && gphotos-scraper",
     "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
-    "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "start:sync": "ts-node src/index sync https://photos.app.goo.gl/gZ1jq1L16cTenTwT7",
     "lint": "npm run lint:code",
     "lint:code": "eslint src/**/*.{ts} --quiet --no-error-on-unmatched-pattern",
