@@ -27,7 +27,9 @@
     "db:push": "npx prisma db push",
     "db:pull": "npx prisma db pull",
     "db:generate": "npx prisma generate",
-    "db:studio": "npx prisma studio"
+    "db:studio": "npx prisma studio",
+    "export:album": "npx sqlite3 prisma/dev.db '.mode json' '.once data/album.json' 'select * from album'",
+    "export:photo": "npx sqlite3 prisma/dev.db '.mode json' '.once data/photo.json' 'select * from photo'"
   },
   "dependencies": {
     "@prisma/client": "^3.12.0",
